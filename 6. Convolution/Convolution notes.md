@@ -64,3 +64,44 @@ h[n]: M point impulse response | 0 to M - 1
 x[n] \* h[n]: N + M - 2 impulse response | 0 to N + M - 2 (y[n])
 
 y[i] = summation(h[j] . x[i - j]) - j:0 to M - 1
+
+# 5
+
+Convolution properties
+
+-   Filters (any kind of systems) are created by designing an appropriate impulse response
+
+Identity property
+
+-   most basic impulse signal is delta function
+-   x[n] \* del[n] = x[n]
+-   del[n] is identity of the convolution operator
+-   x[n] \* k.del[n] = x[n] : k > 1 - gain; k < 1 - attenuate
+-   x[n] \* del[n + s] = x[n + s] : shifting the signal
+
+# 6
+
+-   Integration and differentiation: for continuous signals
+-   signal convolution can perform somewhat similar operation on the discrete signals
+
+First difference
+
+-   Similar to differentiation
+-   calculated as
+    -   y[n] = x[n] - y[n - 1]
+
+Running sum
+
+-   Similar to integration
+-   caculated as
+    -   y[n] = x[n] + y[n - 1]
+
+First difference, Running sum: these equations are known as recursive and difference equations
+
+-   important in designing IIR filters
+
+Convolution obeys basic math properties
+
+-   Commutative
+-   Associative
+-   Distributive
