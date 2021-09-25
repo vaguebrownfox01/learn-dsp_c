@@ -22,6 +22,7 @@ int main()
              (double *)&Impulse_response[0],
              (int)SIG_LENGTH,
              (int)IMP_RSP_LENGTH);
+
     calc_running_sum((double *)&InputSignal_f32_1kHz_15kHz[0],
                      (double *)&Running_Sum_OutputSignal[0],
                      (int)SIG_LENGTH);
