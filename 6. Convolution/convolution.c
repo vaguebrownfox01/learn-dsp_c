@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void convolution(double *sig_src_arr,
-                 double *sig_dest_arr,
-                 double *imp_resp_arr,
-                 int sig_src_length,
-                 int imp_resp_length)
+void convolve(double *sig_src_arr,
+              double *sig_dest_arr,
+              double *imp_resp_arr,
+              int sig_src_length,
+              int imp_resp_length)
 {
     int i, j;
     int _output_length = sig_src_length + imp_resp_length;
