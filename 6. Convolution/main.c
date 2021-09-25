@@ -10,12 +10,15 @@ extern double Impulse_response[IMP_RSP_LENGTH];
 void write_signal_to_file(char *filename, double *signal_arr, int sig_length);
 void convolve(double *sig_src_arr, double *sig_dest_arr, double *imp_resp_arr, int sig_src_length, int imp_resp_length);
 void calc_running_sum(double *sig_src_arr, double *sig_dest_arr, int sig_length);
+void calc_first_difference(double *sig_src_arr, double *sig_dest_arr, int sig_length);
+
 int main()
 {
 
     int out_sig_length = SIG_LENGTH + IMP_RSP_LENGTH;
     double Convlution_OutputSignal[SIG_LENGTH + IMP_RSP_LENGTH];
     double Running_Sum_OutputSignal[SIG_LENGTH];
+    double First_Diff_OutputSignal[SIG_LENGTH];
 
     convolve((double *)&InputSignal_f32_1kHz_15kHz[0],
              (double *)&Convlution_OutputSignal[0],
@@ -27,10 +30,15 @@ int main()
                      (double *)&Running_Sum_OutputSignal[0],
                      (int)SIG_LENGTH);
 
+    calc_first_difference((double *)&InputSignal_f32_1kHz_15kHz[0],
+                          (double *)&First_Diff_OutputSignal[0],
+                          (int)SIG_LENGTH);
+
     write_signal_to_file("d_input_sig.dat", (double *)&InputSignal_f32_1kHz_15kHz[0], SIG_LENGTH);
     write_signal_to_file("d_impulse_response.dat", (double *)&Impulse_response[0], IMP_RSP_LENGTH);
     write_signal_to_file("d_convoluted_sig.dat", (double *)&Convlution_OutputSignal[0], out_sig_length);
     write_signal_to_file("d_running_sum_sig.dat", (double *)&Running_Sum_OutputSignal[0], SIG_LENGTH);
+    write_signal_to_file("d_first_diff_sig.dat", (double *)&Running_Sum_OutputSignal[0], SIG_LENGTH);
 
     return 0;
 }
