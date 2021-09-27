@@ -61,3 +61,5 @@ Information encoding
 
 Audio signal: Information is present in the frequency component (sinusoids) present in the signal, more than the shape of the waveform.
 Chebyshev and Butterworth: used as anti-aliasing filters; good performance because better roll off; bad step response doesn't affect much.
+
+Get dem samples boi!
