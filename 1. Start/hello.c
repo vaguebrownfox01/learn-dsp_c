@@ -3,6 +3,6 @@
 
 int main()
 {
-    printf("Hello DSP!");
+    printf("Hello DSP!\n");
     return 0;
 }

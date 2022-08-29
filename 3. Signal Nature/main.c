@@ -12,6 +12,7 @@ double calc_sig_stddev(double sig_variance);
 double MEAN;
 double VARIANCE;
 double STD_DEV;
+
 int main()
 {
     MEAN = calc_sig_mean(&InputSignal_f32_1kHz_15kHz[0], SIG_LENGTH);
