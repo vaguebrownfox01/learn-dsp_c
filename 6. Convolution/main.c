@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "convolution.h"
+
 #include "waveform.h"
+#include "convolution.h"
 
 int main()
 {
 
-    int out_sig_length = SIG_LENGTH + IMP_RSP_LENGTH;
+    const int out_sig_length = SIG_LENGTH + IMP_RSP_LENGTH;
     double Convlution_OutputSignal[SIG_LENGTH + IMP_RSP_LENGTH];
     double Running_Sum_OutputSignal[SIG_LENGTH];
     double First_Diff_OutputSignal[SIG_LENGTH];
@@ -29,7 +30,7 @@ int main()
     write_signal_to_file("exports/d_impulse_response.dat", (double *)&Impulse_response[0], IMP_RSP_LENGTH);
     write_signal_to_file("exports/d_convoluted_sig.dat", (double *)&Convlution_OutputSignal[0], out_sig_length);
     write_signal_to_file("exports/d_running_sum_sig.dat", (double *)&Running_Sum_OutputSignal[0], SIG_LENGTH);
-    write_signal_to_file("exports/d_first_diff_sig.dat", (double *)&Running_Sum_OutputSignal[0], SIG_LENGTH);
+    write_signal_to_file("exports/d_first_diff_sig.dat", (double *)&First_Diff_OutputSignal[0], SIG_LENGTH);
     printf("\n");
     return 0;
 }
