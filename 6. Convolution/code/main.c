@@ -3,6 +3,7 @@
 
 #include "waveform.h"
 #include "convolution.h"
+#include "util.h"
 
 int main()
 {
