@@ -21,23 +21,29 @@ General mention of signals - In Time domain (lower case)
 Continuous signal: x(t), y(t) - "paranthese"
 Discrete signal: x[t], y[t] - "square brackets"
 
+Encoding:
+Freq Domain: information encoded in sine waves of signal
+Time Domain: information encoded in shape of the waveform
+
 # 3
 
-Linear systems: Homogeneity and Additivity, and Shift invariance (in signals and systems)
+Linear systems: 
+- Homogeneity and Additivity, and Shift invariance (in signals and systems)
 
-Homogeneity:
-x[t] => /system/ => y[t];
-kx[t] => /system/ => ky[t];
-e.g. Simple resistor
+- Homogeneity:
+    - x[t] => /system/ => y[t];
+    - kx[t] => /system/ => ky[t];
+    - e.g. Simple resistor
 
-Additivity:
-x1[t] => /system/ => y1[t];
-x2[t] => /system/ => y2[t];
-x1[t] + x2[t] => /system/ => y1[t] + y2[t];
+- Additivity:
+    - x1[t] => /system/ => y1[t];
+    - x2[t] => /system/ => y2[t];
+    - x1[t] + x2[t] => /system/ => y1[t] + y2[t];
+    - e.g. Voltage source
 
-Shift invariance
-x[t] => /system/ => y[t];
-x[t + s] => /system/ => y[t + s];
+- Shift invariance
+    - x[t] => /system/ => y[t];
+    - x[t + s] => /system/ => y[t + s];
 
 Sinusoidal fidility:
 sin(f) => /system/ => sin(f)
