@@ -1,0 +1,1 @@
+int write_signal_to_file(const char *file_name, double* signal_arr, int sig_length);

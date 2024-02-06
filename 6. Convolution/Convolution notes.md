@@ -1,4 +1,4 @@
-# 1
+## 1
 
 Convolution
 
@@ -15,7 +15,7 @@ Convolution
 -   Impulse decomposition: a way to analyze a signal one sample at a time
 -   When impulse decomposition is used in the process of combining two signal: the procedure can be described mathematically as convolution
 
-# 2
+## 2
 
 -   Delta function: normalised impulse signal | unit impulse
     -   del[3] = 0001000...
@@ -27,7 +27,7 @@ For linear systems
 
 -   If you know unit impulse response of a system: you can find out response for any other impulse responses
 
-# 3
+## 3
 
 Convolution kernel
 
@@ -55,7 +55,7 @@ x[n] -> / h[n] / -> y[n]
 -   Convolution is cummutative
     -   h[n] \* x[n] = y[n]
 
-# 4
+## 4
 
 Convolution sum
 
@@ -65,7 +65,7 @@ x[n] \* h[n]: N + M - 2 impulse response | 0 to N + M - 2 (y[n])
 
 y[i] = summation(h[j] . x[i - j]) - j:0 to M - 1
 
-# 5
+## 5
 
 Convolution properties
 
@@ -79,7 +79,7 @@ Identity property
 -   x[n] \* k.del[n] = x[n] : k > 1 - gain; k < 1 - attenuate
 -   x[n] \* del[n + s] = x[n + s] : shifting the signal
 
-# 6
+## 6
 
 -   Integration and differentiation: for continuous signals
 -   signal convolution can perform somewhat similar operation on the discrete signals

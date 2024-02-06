@@ -7,7 +7,7 @@ void convolve(double *sig_src_arr,
               int sig_src_length,
               int imp_resp_length)
 {
-    int i, j;
+    int i=0, j=0;
     int _output_length = sig_src_length + imp_resp_length;
 
     for (i = 0; i < _output_length; i++)
